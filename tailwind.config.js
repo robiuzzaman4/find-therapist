@@ -11,7 +11,7 @@ export default {
         "ft-black": "#152A16",
         "ft-gray-200": "#E7E7E7",
         "ft-gray-300": "#D4E9FF",
-        "ft-gray-400": "#A7A8A8",
+        "ft-gray-400": "#EEF2F5",
         "ft-gray-500": "#5C635A",
         "ft-blue-400": "#4285F3",
         "ft-blue-500": "#156BCA",

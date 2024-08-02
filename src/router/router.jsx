@@ -5,6 +5,10 @@ import Home from "../pages/home";
 import SignUp from "../pages/sign-up";
 import SignIn from "../pages/sign-in";
 import ProtectedRoute from "./protected-route";
+import NewListing from "../pages/new-listing";
+import Search from "../pages/search";
+import About from "../pages/about";
+import Favourites from "../pages/fabourites";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +36,22 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Home />,
+      },
+      {
+        path: "/dashboard/new-listing",
+        element: <NewListing />,
+      },
+      {
+        path: "/dashboard/search",
+        element: <Search />,
+      },
+      {
+        path: "/dashboard/about",
+        element: <About />,
+      },
+      {
+        path: "/dashboard/favourites",
+        element: <Favourites />,
       },
     ],
   },
