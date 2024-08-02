@@ -8,10 +8,10 @@ const SignInForm = () => {
   const [togglePassShow, setTogglePassShow] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { userLogin } = useContext(AuthContext);
+  const { userSignin } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // handle sign in
+  // handling sign in with email password
   const handleSignIn = (e) => {
     e.preventDefault();
 
@@ -22,13 +22,14 @@ const SignInForm = () => {
     // sign up user
     try {
       setLoading(true);
-      userLogin(email, password)
+      userSignin(email, password)
         .then((result) => {
           const logedInUser = result?.user;
-          console.log(logedInUser);
-          form.reset();
-          navigate("/dashboard");
-          toast.success("User Signin Successfull!");
+          if (logedInUser) {
+            form.reset();
+            navigate("/dashboard");
+            toast.success("User Signin Successfull!");
+          }
           setLoading(false);
         })
         .catch((error) => {
@@ -42,6 +43,7 @@ const SignInForm = () => {
       setLoading(false);
     }
   };
+
   return (
     <div className="grid gap-4">
       <form onSubmit={handleSignIn} className="grid gap-6">

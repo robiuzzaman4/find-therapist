@@ -5,10 +5,31 @@ import fb from "../assets/icons/fb.svg";
 import Container from "../components/container";
 import SignInForm from "../components/sign-in-form";
 import { toast } from "sonner";
+import { useContext } from "react";
+import { AuthContext } from "../provider/auth-provider";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const { googleSignin } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  // handling sign in with facebook
   const hanldeFacebookSignin = () => {
     toast.info("Sign in with Facebook is not implemented!");
+  };
+
+  // handling sign in with google
+  const handleGoogleSignin = () => {
+    googleSignin()
+      .then((result) => {
+        const user = result.user;
+        if (user) {
+          navigate("/dashboard");
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
   return (
     <div className="min-h-screen w-full py-[100px]">
@@ -32,7 +53,10 @@ const SignIn = () => {
             {/* social login */}
             <div className="grid gap-8">
               <div className="flex items-center gap-12">
-                <button className="w-[178px] h-[54px] bg-gradient-to-br from-[#E4E4E4] to-[#ffffff] rounded-[10px] flex items-center justify-center gap-[14px] text-base text-ft-black font-normal shadow-md">
+                <button
+                  onClick={handleGoogleSignin}
+                  className="w-[178px] h-[54px] bg-gradient-to-br from-[#E4E4E4] to-[#ffffff] rounded-[10px] flex items-center justify-center gap-[14px] text-base text-ft-black font-normal shadow-md"
+                >
                   <img src={google} alt="google logo" className="h-5 w-5" />
                   <p className="text-base text-ft-black font-normal">Google</p>
                 </button>

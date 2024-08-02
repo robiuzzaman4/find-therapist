@@ -3,9 +3,12 @@ import logoutarrow from "../assets/icons/logout-arrow.svg";
 import { useContext } from "react";
 import { AuthContext } from "../provider/auth-provider";
 import { toast } from "sonner";
+import avatar from "../assets/icons/avatar.svg";
 
 const Navbar = () => {
   const { user, userLogout } = useContext(AuthContext);
+
+  console.log("CURRENT USER: ", user);
 
   // handling logout functionality
   const handleLogout = () => {
@@ -23,11 +26,17 @@ const Navbar = () => {
       {/* user info */}
       <div className="flex items-center gap-3">
         {/* avatar */}
-        <div className="h-10 w-10 rounded-full border border-ft-gray-200 grid place-items-center bg-ft-white text-xl font-medium text-ft-blue-500 cursor-pointer">
-          {user && user?.displayName ? user?.displayName?.charAt(0) : "n/a"}
+        <div className="h-10 w-10 rounded-full border border-ft-gray-200 grid place-items-center bg-ft-white text-xl font-medium  cursor-pointer">
+          <img
+            src={user && user?.photoURL ? user?.photoURL : avatar}
+            alt="user profile picture"
+            className={`h-full w-full rounded-full object-cover ${
+              !user?.photoURL && "p-1"
+            }`}
+          />
         </div>
-        <div className="grid gap-0.5">
-          <p className="text-base font-medium text-ft-black">
+        <div className="">
+          <p className="text-[15px] font-medium text-ft-black">
             {user && user?.displayName ? user?.displayName : "N/A"}
           </p>
           <p className="text-sm font-normal text-ft-gray-500">

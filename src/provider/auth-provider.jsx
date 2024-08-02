@@ -19,12 +19,12 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [spinner, setSpinner] = useState(true);
 
-  const userRegister = (email, password) => {
+  const userSignup = (email, password) => {
     setSpinner(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  const userLogin = (email, password) => {
+  const userSignin = (email, password) => {
     setSpinner(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
@@ -34,7 +34,7 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  const googleLogin = () => {
+  const googleSignin = () => {
     return signInWithPopup(auth, googleProvider);
   };
 
@@ -49,10 +49,10 @@ const AuthProvider = ({ children }) => {
   const authInfo = {
     user,
     spinner,
-    userRegister,
-    userLogin,
+    userSignup,
+    userSignin,
     userLogout,
-    googleLogin,
+    googleSignin,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

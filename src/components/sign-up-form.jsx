@@ -10,7 +10,7 @@ const SignUpForm = () => {
   const [toggleConfirmPassShow, setToggleConfirmPassShow] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { userRegister } = useContext(AuthContext);
+  const { userSignup } = useContext(AuthContext);
   const navigate = useNavigate();
 
   // handle sign up
@@ -31,7 +31,7 @@ const SignUpForm = () => {
     // sign up user
     try {
       setLoading(true);
-      userRegister(email, password)
+      userSignup(email, password)
         .then((result) => {
           const user = result.user;
           // update user name
