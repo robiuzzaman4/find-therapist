@@ -50,7 +50,7 @@ const SignInForm = () => {
               Remember me
             </p>
           </label>
-          <p className="text-ft-blue-500 text-sm font-medium">
+          <p className="text-ft-blue-500 text-sm font-medium cursor-pointer">
             Forget Password?
           </p>
         </div>
