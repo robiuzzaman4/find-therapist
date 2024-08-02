@@ -2,16 +2,29 @@ import notification from "../assets/icons/notification.svg";
 import logoutarrow from "../assets/icons/logout-arrow.svg";
 import { useContext } from "react";
 import { AuthContext } from "../provider/auth-provider";
+import { toast } from "sonner";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, userLogout } = useContext(AuthContext);
+
+  // handling logout functionality
+  const handleLogout = () => {
+    userLogout()
+      .then(() => {
+        toast.success("Log Out successfull!");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <nav className="w-full bg-ft-white border-b border-b-ft-gray-200 py-6 px-[30px] flex items-center justify-between gap-4">
       {/* user info */}
       <div className="flex items-center gap-3">
         {/* avatar */}
         <div className="h-10 w-10 rounded-full border border-ft-gray-200 grid place-items-center bg-ft-white text-xl font-medium text-ft-blue-500 cursor-pointer">
-        {user && user?.displayName ? user?.displayName?.charAt(0) : "n/a"}
+          {user && user?.displayName ? user?.displayName?.charAt(0) : "n/a"}
         </div>
         <div className="grid gap-0.5">
           <p className="text-base font-medium text-ft-black">
@@ -29,7 +42,10 @@ const Navbar = () => {
         </button>
         <div className="w-px h-10 bg-ft-gray-200" />
 
-        <button className="h-10 w-fit text-ft-red-500 text-base font-medium flex items-center justify-center gap-2.5">
+        <button
+          onClick={handleLogout}
+          className="h-10 w-fit text-ft-red-500 text-base font-medium flex items-center justify-center gap-2.5"
+        >
           <p>Logout</p>
           <div className="h-10 w-10 rounded-full bg-ft-red-100 grid place-items-center">
             <img src={logoutarrow} alt="logoutarrow icon" className="h-5 w-5" />

@@ -4,6 +4,7 @@ import DashboardLayout from "../layout/dashboard-layout";
 import Home from "../pages/home";
 import SignUp from "../pages/sign-up";
 import SignIn from "../pages/sign-in";
+import ProtectedRoute from "./protected-route";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: (
+      <ProtectedRoute>
+        <DashboardLayout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         path: "/dashboard",
