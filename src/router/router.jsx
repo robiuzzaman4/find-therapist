@@ -9,6 +9,8 @@ import NewListing from "../pages/new-listing";
 import Search from "../pages/search";
 import About from "../pages/about";
 import Favourites from "../pages/fabourites";
+import HelpCenter from "../pages/help-center";
+import Settings from "../pages/settings";
 
 export const router = createBrowserRouter([
   {
@@ -52,6 +54,14 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/favourites",
         element: <Favourites />,
+      },
+      {
+        path: "/dashboard/help-center",
+        element: <HelpCenter />,
+      },
+      {
+        path: "/dashboard/settings",
+        element: <Settings />,
       },
     ],
   },
