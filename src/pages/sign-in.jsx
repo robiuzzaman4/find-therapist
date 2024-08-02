@@ -4,8 +4,12 @@ import google from "../assets/icons/google.svg";
 import fb from "../assets/icons/fb.svg";
 import Container from "../components/container";
 import SignInForm from "../components/sign-in-form";
+import { toast } from "sonner";
 
 const SignIn = () => {
+  const hanldeFacebookSignin = () => {
+    toast.info("Sign in with Facebook is not implemented!");
+  };
   return (
     <div className="min-h-screen w-full py-[100px]">
       <Container>
@@ -32,7 +36,10 @@ const SignIn = () => {
                   <img src={google} alt="google logo" className="h-5 w-5" />
                   <p className="text-base text-ft-black font-normal">Google</p>
                 </button>
-                <button className="w-[178px] h-[54px] bg-gradient-to-br from-[#298FFF] to-[#0778F5] rounded-[10px] flex items-center justify-center gap-[14px] text-base  font-normal shadow-md">
+                <button
+                  onClick={hanldeFacebookSignin}
+                  className="w-[178px] h-[54px] bg-gradient-to-br from-[#298FFF] to-[#0778F5] rounded-[10px] flex items-center justify-center gap-[14px] text-base  font-normal shadow-md"
+                >
                   <img src={fb} alt="facebook logo" className="h-5 w-5" />
                   <p className="text-base text-ft-white font-normal">
                     Facebook

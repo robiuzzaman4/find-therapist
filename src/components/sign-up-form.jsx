@@ -34,6 +34,7 @@ const SignUpForm = () => {
       userRegister(email, password)
         .then((result) => {
           const user = result.user;
+          // update user name
           updateUser(user, name);
           form.reset();
           navigate("/signin");
@@ -44,17 +45,17 @@ const SignUpForm = () => {
           if (
             error.message === "Firebase: Error (auth/email-already-in-use)."
           ) {
-            return toast.error("User already exist!");
+            toast.error("User already exist!");
           } else if (
             error.message ===
             "Firebase: Password should be at least 6 characters (auth/weak-password)."
           ) {
-            return toast.error(" Password should be at least 6 characters!");
+            toast.error(" Password should be at least 6 characters!");
           }
           setLoading(false);
         });
     } catch (error) {
-      console.log("user registration error: ", error);
+      console.log("user signup error: ", error);
       setLoading(false);
     }
 

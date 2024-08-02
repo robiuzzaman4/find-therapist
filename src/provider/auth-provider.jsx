@@ -43,11 +43,8 @@ const AuthProvider = ({ children }) => {
       setUser(logedInUser);
       setSpinner(false);
     });
-
-    console.log("user", user);
-
     return () => unsubscribe();
-  }, [user]);
+  }, []);
 
   const authInfo = {
     user,
