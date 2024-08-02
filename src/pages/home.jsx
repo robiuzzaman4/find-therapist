@@ -1,10 +1,10 @@
+import Hero from "../components/hero";
+
 const Home = () => {
   return (
-    <>
-      <div className="text-3xl font-medium">
-        <h1>This is Home Page</h1>
-      </div>
-    </>
+    <div className="lg:px-[30px] py-3 lg:py-[30px]">
+      <Hero/>
+    </div>
   );
 };
 
