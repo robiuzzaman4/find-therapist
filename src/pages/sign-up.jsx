@@ -25,7 +25,7 @@ const SignUp = () => {
               </p>
             </div>
             {/* signup form */}
-            <SignUpForm/>
+            <SignUpForm />
           </div>
           {/* right part */}
           <div className="grid gap-10">
@@ -36,7 +36,7 @@ const SignUp = () => {
                 alt="banner"
                 className="h-full max-h-[800px] w-full object-cover blur-[3px]"
               />
-              <div className="bg-ft-black/50 py-[30px] px-[35px] backdrop-blur-lg p-4 absolute top-[50%] grid place-items-center gap-1 rounded-[10px]">
+              <div className="bg-ft-black/50 py-[30px] px-[35px] backdrop-blur-lg p-4 absolute top-[50%] grid place-items-center gap-1 rounded-[10px] -mt-16 w-full max-w-[320px]">
                 <p className="text-[22px] leading-[35px] font-semibold text-ft-blue-400">
                   Create Account
                 </p>
