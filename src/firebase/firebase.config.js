@@ -1,18 +1,14 @@
-// Import the functions you need from the SDKs you need
+/* eslint-disable no-undef */
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCeEh-n3G9lI9yA00PeVncOF9PDk9Ceyy8",
-  authDomain: "find-therapist-4aa0b.firebaseapp.com",
-  projectId: "find-therapist-4aa0b",
-  storageBucket: "find-therapist-4aa0b.appspot.com",
-  messagingSenderId: "117631853239",
-  appId: "1:117631853239:web:321776165863f48d7ae332",
-  measurementId: "G-X7NKMQC7J9",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
