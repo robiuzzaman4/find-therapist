@@ -5,7 +5,7 @@ const PopularCities = () => {
   return (
     <div className="flex flex-col gap-[18px] relative w-full h-full">
       <SectionTitle title="Popular Cities" className="px-4" />
-      <div className="bg-ft-white h-full rounded-[10px]">
+      <div className="bg-ft-white h-full rounded-[10px] overflow-hidden">
         <table className="w-full">
           <thead>
             <tr>
