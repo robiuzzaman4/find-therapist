@@ -8,6 +8,9 @@ import {
   UsersIcon,
 } from "@heroicons/react/24/outline";
 
+import men1 from "../assets/images/featured-men1.svg";
+import men2 from "../assets/images/featured-men2.svg";
+
 export const routeLinks = [
   {
     label: "Home",
@@ -81,7 +84,7 @@ export const testimonials = [
     therapist: "Cort",
     review:
       "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of the body.",
-    reviewerImg: "../assets/images/featured-men1.svg",
+    reviewerImg: men1,
   },
   {
     id: 2,
@@ -90,7 +93,7 @@ export const testimonials = [
     therapist: "Cort",
     review:
       "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of the body.",
-    reviewerImg: "../assets/images/featured-men2.svg",
+    reviewerImg: men2,
   },
   {
     id: 3,
@@ -99,7 +102,7 @@ export const testimonials = [
     therapist: "Cort",
     review:
       "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of the body.",
-    reviewerImg: "../assets/images/featured-men1.svg",
+    reviewerImg: men1,
   },
   {
     id: 4,
@@ -108,7 +111,7 @@ export const testimonials = [
     therapist: "Cort",
     review:
       "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of the body.",
-    reviewerImg: "../assets/images/featured-men2.svg",
+    reviewerImg: men2,
   },
   {
     id: 5,
@@ -117,7 +120,7 @@ export const testimonials = [
     therapist: "Cort",
     review:
       "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of the body.",
-    reviewerImg: "../assets/images/featured-men1.svg",
+    reviewerImg: men1,
   },
   {
     id: 6,
@@ -126,6 +129,6 @@ export const testimonials = [
     therapist: "Cort",
     review:
       "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of the body.",
-    reviewerImg: "../assets/images/featured-men2.svg",
+    reviewerImg: men2,
   },
 ];

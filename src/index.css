@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  .embla__dot--selected {
+    background-color: #156bca;
+  }
+}
