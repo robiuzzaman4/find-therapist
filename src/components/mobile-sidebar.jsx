@@ -14,7 +14,7 @@ const MobileSidebar = ({ open, setOpen }) => {
             onClick={() => setOpen(false)}
             className="fixed inset-0 z-30 bg-ft-black/60"
           />
-          <div className="w-[262px] min-h-screen bg-ft-white z-50 absolute top-0 right-0">
+          <div className="w-[262px] min-h-screen bg-ft-white z-50 fixed top-0 right-0 bottom-0">
             {/* top section */}
             <div className="pt-[116px] pb-[48px] bg-ft-blue-500 px-4">
               {/* user info */}
@@ -40,7 +40,7 @@ const MobileSidebar = ({ open, setOpen }) => {
               </div>
             </div>
             {/* bottom section */}
-            <div className="py-4 pr-4">
+            <div className="py-4 pr-4 bg-ft-white">
               {/* route links */}
               <div className="flex flex-col items-start w-full">
                 {routeLinks.map((link, i) => (
