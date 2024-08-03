@@ -1,15 +1,17 @@
 import notification from "../assets/icons/notification.svg";
 import logoutarrow from "../assets/icons/logout-arrow.svg";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../provider/auth-provider";
 import { toast } from "sonner";
 import avatar from "../assets/icons/avatar.svg";
 import logo from "../assets/icons/logo.svg";
 import { Link } from "react-router-dom";
 import { Bars3BottomRightIcon, BellIcon } from "@heroicons/react/24/outline";
+import MobileSidebar from "./mobile-sidebar";
 
 const Navbar = () => {
   const { user, userLogout } = useContext(AuthContext);
+  const [open, setOpen] = useState(false);
 
   console.log("CURRENT USER: ", user);
 
@@ -86,9 +88,15 @@ const Navbar = () => {
         </Link>
         <div className="flex items-center gap-3 text-ft-black">
           <BellIcon className="size-6 cursor-pointer" />
-          <Bars3BottomRightIcon className="size-6 cursor-pointer" />
+          <Bars3BottomRightIcon
+            onClick={() => setOpen(true)}
+            className="size-6 cursor-pointer"
+          />
         </div>
       </nav>
+
+      {/* mobile sidebar */}
+      <MobileSidebar open={open} setOpen={setOpen} />
     </>
   );
 };

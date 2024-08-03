@@ -28,6 +28,7 @@ const SignInForm = () => {
           if (logedInUser) {
             form.reset();
             navigate("/dashboard");
+            setLoading(false);
             toast.success("User Signin Successfull!");
           }
           setLoading(false);
