@@ -1,6 +1,7 @@
+import { XCircleIcon } from "@heroicons/react/24/outline";
 import heroBg from "../../assets/images/hero-texture-grp.svg";
 
-const Hero = () => {
+const Hero = ({ search, setSearch, handleSearch, handleClearSearch }) => {
   return (
     <div className="w-full bg-ft-white rounded-[10px] px-4 py-6 md:px-[30px] md:py-[30px] grid lg:grid-cols-2 gap-[56px] lg:gap-[100px] xl:gap-[156px]">
       {/* hero left section */}
@@ -22,8 +23,22 @@ const Hero = () => {
             type="text"
             className="h-full w-full bg-ft-gray-400 rounded-[10px] focus-visible:outline-none px-5 py-5 text-ft-gray-500 text-sm"
             placeholder="ZIP code or city name"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
           />
-          <button className="h-10 w-[84px] rounded-[10px] bg-ft-blue-500 text-ft-white font-medium text-sm absolute top-2.5 right-2.5">
+          {/* cross button */}
+          {search && search?.length > 0 && (
+            <button onClick={handleClearSearch}>
+              <XCircleIcon className="size-5 text-ft-gray-500 absolute top-5 right-[100px]" />
+            </button>
+          )}
+          {/* search button */}
+          <button
+            onClick={handleSearch}
+            className="h-10 w-[84px] rounded-[10px] bg-ft-blue-500 text-ft-white font-medium text-sm absolute top-2.5 right-2.5"
+          >
             Go
           </button>
         </div>
@@ -43,8 +58,23 @@ const Hero = () => {
           type="text"
           className="h-full w-full bg-ft-gray-400 rounded-[10px] focus-visible:outline-none px-5 py-5 text-ft-gray-500 text-sm"
           placeholder="ZIP code or city name"
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
         />
-        <button className="h-10 w-[84px] rounded-[10px] bg-ft-blue-500 text-ft-white font-medium text-sm absolute top-2.5 right-2.5">
+        {/* cross button */}
+        {search && search?.length > 0 && (
+          <button onClick={handleClearSearch}>
+            <XCircleIcon className="size-5 text-ft-gray-500 absolute top-5 right-[100px]" />
+          </button>
+        )}
+
+        {/* search button */}
+        <button
+          onClick={handleSearch}
+          className="h-10 w-[84px] rounded-[10px] bg-ft-blue-500 text-ft-white font-medium text-sm absolute top-2.5 right-2.5"
+        >
           Go
         </button>
       </div>

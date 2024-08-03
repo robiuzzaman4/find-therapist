@@ -2,42 +2,42 @@
   {
     "id": "1",
     "name": "Alexander Cort",
-    "img": "../assets/images/therapist1.svg",
+    "img": "/therapist1.svg",
     "location": "Chicago, IL",
     "chember": "Mobile & In-Studio"
   },
   {
     "id": "2",
     "name": "Michael Smith",
-    "img": "../assets/images/therapist2.svg",
+    "img": "/therapist2.svg",
     "location": "Washington, D.C.",
     "chember": "Mobile & In-Studio"
   },
   {
     "id": "3",
     "name": "David Martinez",
-    "img": "../assets/images/therapist3.svg",
+    "img": "/therapist3.svg",
     "location": "Fresno, CA",
     "chember": "Mobile & In-Studio"
   },
   {
     "id": "4",
     "name": "Jennifer Lee",
-    "img": "../assets/images/therapist4.svg",
+    "img": "/therapist4.svg",
     "location": "Los Angeles, CA",
     "chember": "Mobile & In-Studio"
   },
   {
     "id": "5",
     "name": "Deisen Farnades",
-    "img": "../assets/images/therapist3.svg",
+    "img": "/therapist3.svg",
     "location": "Fresno, CA",
     "chember": "Mobile & In-Studio"
   },
   {
     "id": "6",
     "name": "Emil Kualski",
-    "img": "../assets/images/therapist4.svg",
+    "img": "/therapist4.svg",
     "location": "Los Angeles, CA",
     "chember": "Mobile & In-Studio"
   }

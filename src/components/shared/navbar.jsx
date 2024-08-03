@@ -11,9 +11,8 @@ import MobileSidebar from "../ui/mobile-sidebar";
 
 const Navbar = () => {
   const { user, userLogout } = useContext(AuthContext);
+  // state for mobile sidebar
   const [open, setOpen] = useState(false);
-
-  console.log("CURRENT USER: ", user);
 
   // handling logout functionality
   const handleLogout = () => {

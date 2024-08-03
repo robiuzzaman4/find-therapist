@@ -35,6 +35,7 @@ const Testimonials = () => {
           </div>
         </div>
 
+        {/* dots */}
         <div className="mt-6">
           <div className="flex items-center justify-center gap-3">
             {scrollSnaps.map((_, index) => (
