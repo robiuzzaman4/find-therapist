@@ -52,7 +52,7 @@ export const systemLinks = [
   },
 ];
 
-export const cyties = [
+export const cities = [
   "Atlanta, GA",
   "Indianapolis, IN",
   "Philadelphia, PA",

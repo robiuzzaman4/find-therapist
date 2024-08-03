@@ -10,10 +10,10 @@ const Testimonials = () => {
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
   return (
-    <div className="grid gap-[18px] relative w-full">
+    <div className="flex flex-col gap-[18px] relative w-full h-full">
       <SectionTitle title="Featured Testimonial" className="px-4" />
       <div
-        className="bg-ft-white px-4 py-6 lg:px-[30px] lg:py-[30px] rounded-[10px] overflow-hidden"
+        className="bg-ft-white h-full px-4 py-6 lg:px-[30px] lg:py-[30px] rounded-[10px] overflow-hidden"
         ref={emblaRef}
       >
         <div className="flex gap-[30px]">
