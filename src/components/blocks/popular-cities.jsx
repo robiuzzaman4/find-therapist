@@ -1,5 +1,6 @@
-import { cities } from "../constants";
-import SectionTitle from "./section-title";
+import { cities } from "../../constants";
+import SectionTitle from "../shared/section-title";
+
 
 const PopularCities = () => {
   return (

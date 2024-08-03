@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import { Navigate } from "react-router-dom";
-import Spinner from "../components/spinner";
+import Spinner from "../components/shared/spinner";
 import { AuthContext } from "../provider/auth-provider";
 
 const ProtectedRoute = ({ children }) => {

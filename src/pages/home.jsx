@@ -1,6 +1,6 @@
-import Hero from "../components/hero";
-import PopularCities from "../components/popular-cities";
-import Testimonials from "../components/testimonials";
+import Hero from "../components/blocks/hero";
+import Testimonials from "../components/blocks/testimonials";
+import PopularCities from "../components/blocks/popular-cities";
 
 const Home = () => {
   return (

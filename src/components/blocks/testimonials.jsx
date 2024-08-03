@@ -1,9 +1,10 @@
-import { testimonials } from "../constants";
-import SectionTitle from "./section-title";
+import { testimonials } from "../../constants";
+import SectionTitle from "../shared/section-title";
 
 import useEmblaCarousel from "embla-carousel-react";
-import TestimonialCard from "./testimonial-card";
-import { DotButton, useDotButton } from "./embla-carousel-dot-button";
+
+import { DotButton, useDotButton } from "../ui/embla-carousel-dot-button";
+import TestimonialCard from "../ui/testimonial-card";
 
 const Testimonials = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -41,7 +42,9 @@ const Testimonials = () => {
                 key={index}
                 onClick={() => onDotButtonClick(index)}
                 className={"embla__dot h-[9px] w-[9px] rounded-full bg-ft-gray-500".concat(
-                  index === selectedIndex ? "bg-ft-blue-500 embla__dot--selected" : ""
+                  index === selectedIndex
+                    ? "bg-ft-blue-500 embla__dot--selected"
+                    : ""
                 )}
               />
             ))}

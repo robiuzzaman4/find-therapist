@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import eyeNone from "../assets/icons/eye-none.svg";
+import eyeNone from "../../assets/icons/eye-none.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-import { AuthContext } from "../provider/auth-provider";
+import { AuthContext } from "../../provider/auth-provider";
 
 const SignInForm = () => {
   const [togglePassShow, setTogglePassShow] = useState(false);

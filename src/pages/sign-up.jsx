@@ -1,7 +1,7 @@
 import rootImage from "../assets/images/root-bg.svg";
 import logo from "../assets/icons/logo.svg";
-import Container from "../components/container";
-import SignUpForm from "../components/sign-up-form";
+import Container from "../components/shared/container";
+import SignUpForm from "../components/ui/sign-up-form";
 const SignUp = () => {
   return (
     <div className="min-h-screen w-full py-[100px]">

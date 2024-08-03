@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/icons/logo.svg";
-import { routeLinks, systemLinks } from "../constants";
-import Navlink from "./navlink";
+import logo from "../../assets/icons/logo.svg";
+import { routeLinks, systemLinks } from "../../constants";
+import Navlink from "../shared/navlink";
+
 
 const Sidebar = () => {
   return (

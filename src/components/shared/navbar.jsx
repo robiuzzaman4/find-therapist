@@ -1,13 +1,13 @@
-import notification from "../assets/icons/notification.svg";
-import logoutarrow from "../assets/icons/logout-arrow.svg";
+import notification from "../../assets/icons/notification.svg";
+import logoutarrow from "../../assets/icons/logout-arrow.svg";
 import { useContext, useState } from "react";
-import { AuthContext } from "../provider/auth-provider";
+import { AuthContext } from "../../provider/auth-provider";
 import { toast } from "sonner";
-import avatar from "../assets/icons/avatar.svg";
-import logo from "../assets/icons/logo.svg";
+import avatar from "../../assets/icons/avatar.svg";
+import logo from "../../assets/icons/logo.svg";
 import { Link } from "react-router-dom";
 import { Bars3BottomRightIcon, BellIcon } from "@heroicons/react/24/outline";
-import MobileSidebar from "./mobile-sidebar";
+import MobileSidebar from "../ui/mobile-sidebar";
 
 const Navbar = () => {
   const { user, userLogout } = useContext(AuthContext);

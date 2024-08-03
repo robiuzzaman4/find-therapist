@@ -1,4 +1,4 @@
-import heroBg from "../assets/images/hero-texture-grp.svg";
+import heroBg from "../../assets/images/hero-texture-grp.svg";
 
 const Hero = () => {
   return (

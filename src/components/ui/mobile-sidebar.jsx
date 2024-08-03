@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { AuthContext } from "../provider/auth-provider";
-import avatar from "../assets/icons/avatar.svg";
-import { routeLinks, systemLinks } from "../constants";
-import Navlink from "./navlink";
+import { AuthContext } from "../../provider/auth-provider";
+import avatar from "../../assets/icons/avatar.svg";
+import { routeLinks, systemLinks } from "../../constants";
+import Navlink from "../shared/navlink";
 
 const MobileSidebar = ({ open, setOpen }) => {
   const { user } = useContext(AuthContext);

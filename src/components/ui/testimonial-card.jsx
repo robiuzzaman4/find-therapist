@@ -2,11 +2,11 @@ import { MapPinIcon } from "@heroicons/react/20/solid";
 
 const TestimonialCard = ({ item }) => {
   return (
-    <div className="bg-ft-white flex items-center gap-[15px] p-2.5 border border-ft-gray-200 rounded-[10px]">
+    <div className="bg-ft-white flex items-center gap-[15px] p-2.5 border border-ft-gray-200 rounded-[10px] h-full">
       <img
         src={item?.reviewerImg}
         alt={item?.therapi}
-        className="w-[130px] h-full min-h-[140px] rounded-lg object-cover"
+        className="w-[130px] h-full min-h-[140px] lg:min-h-[160px] rounded-lg object-cover"
       />
       <div className="grid gap-4">
         <span className="grid gap-2">
