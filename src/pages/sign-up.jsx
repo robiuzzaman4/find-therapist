@@ -47,7 +47,7 @@ const SignUp = () => {
                   <p className="text-[22px] leading-[35px] font-semibold text-ft-blue-400">
                     Create Account
                   </p>
-                  <p className="text-[22px] leading-[35px] font-medium text-ft-white">
+                  <p className="text-[22px] leading-[35px] font-medium text-ft-white text-center">
                     Fill in Your Information
                   </p>
                 </div>
@@ -95,7 +95,7 @@ const SignUp = () => {
                 >
                   Create Account
                 </button>
-                <p className="text-[22px] leading-[35px] font-medium text-ft-white">
+                <p className="text-[22px] leading-[35px] font-medium text-ft-white text-center">
                   Fill in Your Information
                 </p>
               </div>
